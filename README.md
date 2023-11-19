@@ -102,6 +102,6 @@ $ yarn build
 React version:
 
 ```
-$ yarn build:React
+$ yarn build:react
 // Builds server and React client
 ```
