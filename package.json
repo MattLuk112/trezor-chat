@@ -1,0 +1,44 @@
+{
+  "name": "trezor-chat",
+  "version": "1.0.0",
+  "main": "src/server/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn concurrently -n SERVER,CLIENT -c bgBlue.bold,bgMagenta.bold \"yarn dev:server\" \"yarn dev:client:vue\"",
+    "dev:react": "yarn concurrently -n SERVER,CLIENT -c bgBLue.bold,bgMagenta.bold \"yarn dev:server\" \"yarn dev:client:react\"",
+    "build": "yarn build:client:vue --emptyOutDir && yarn build:server",
+    "build:react": "yarn build:client:react --emptyOutDir && yarn build:server",
+    "build:client:vue": "vite build --config src/client/vue/vite.config.ts --emptyOutDir",
+    "build:client:react": "vite build --config src/client/react/vite.config.ts --emptyOutDir",
+    "build:server": "tsc -p tsconfig.server.json",
+    "dev:server": "tsx watch src/server/index.ts -p tsconfig.server.json",
+    "dev:client:vue": "vite --config src/client/vue/vite.config.ts",
+    "dev:client:react": "vite --config src/client/react/vite.config.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.1.1",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "tsx": "^3.14.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vue-tsc": "^1.8.22"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "@trezor/connect-web": "^9.1.5",
+    "axios": "^1.6.1",
+    "dotenv": "^16.3.1",
+    "peer": "^1.0.1",
+    "peerjs": "^1.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vue": "^3.3.7"
+  }
+}

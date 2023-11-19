@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "include": [
+    "src/client/**/*.ts",
+    "src/client/**/*.d.ts",
+    "src/client/**/*.vue",
+    "src/client/**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "dist/server",
+    "sourceMap": true,
+    "target": "esnext",
+    "types": []
+  },
+  "include": ["src/server/*"]
+}
